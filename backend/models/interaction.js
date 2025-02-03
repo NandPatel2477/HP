@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
-const AnalyticsSchema = new mongoose.Schema({
+const InteractionSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  activity: String,
+  eventType: String,
+  metadata: Object,
   timestamp: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Analytics', AnalyticsSchema);
+module.exports = mongoose.model('Interaction', InteractionSchema);

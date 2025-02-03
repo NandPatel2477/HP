@@ -1,13 +1,7 @@
-const express = require("express")
-const app = express();
+const express = require('express');
+const connectDB = require('./config/db');
+const app = require('./app');
 
-let port = 3000;
-
-app.get("/", (req, res) => {
-    res.send("Heloo world nice meet you.");
-});
-
-app.listen(port, () => {
-    console.log(`App is listening on port: ${port}`);
-});
-
+connectDB();
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

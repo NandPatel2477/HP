@@ -1,8 +1,8 @@
 const express = require('express');
-const { getAnalytics } = require('../controllers/analyticsController');
+const { logInteraction } = require('../controllers/interactionController');
 const authMiddleware = require('../middleware/authMiddleware');
 const router = express.Router();
 
-router.get('/', authMiddleware, getAnalytics);
+router.post('/log', authMiddleware, logInteraction);
 
 module.exports = router;
