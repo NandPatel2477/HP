@@ -1,6 +1,6 @@
 // src/app/analytics/page.tsx
 import { Card, CardHeader, CardBody, Button } from '@shadcn/ui';
-import Chart from './components/Chart';
+import Chart from '../../components/Chart';
 
 const AnalyticsPage = () => {
   return (
