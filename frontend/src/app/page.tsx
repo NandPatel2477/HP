@@ -1,8 +1,8 @@
 // src/app/page.tsx
 
-import { Card, CardHeader, CardBody, Button } from '@shadcn/ui';
-
-import CustomCard from '../components/charts/Card'; 
+import { Card, CardHeader, CardBody } from '@shadcn/ui';
+// src/app/page.tsx
+import CustomCard from './components/Card'; 
 
 const HomePage = () => {
   return (
@@ -14,9 +14,7 @@ const HomePage = () => {
         <CustomCard title="Revenue" value="$100,000" />
       </div>
       <div>
-        <Button variant="primary" onClick={() => alert('View More')}>
-          View More
-        </Button>
+      
       </div>
     </div>
   );
