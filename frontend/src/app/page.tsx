@@ -1,6 +1,7 @@
 // src/app/page.tsx
+
 import { Card, CardHeader, CardBody, Button } from '@shadcn/ui';
-// src/app/page.tsx
+
 import CustomCard from '../components/charts/Card'; 
 
 const HomePage = () => {

@@ -1,32 +1,37 @@
-// src/app/analytics/page.tsx
-import { Card, CardHeader, CardBody, Button } from '@shadcn/ui';
-import Chart from '../../components/Chart';
+import React from 'react';
 
 const AnalyticsPage = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-semibold mb-4">User Analytics</h1>
-      <div className="grid grid-cols-2 gap-6 mb-6">
-        <Card>
-          <CardHeader>
-            <h3 className="text-xl">Monthly Overview</h3>
-          </CardHeader>
-          <CardBody>
-            <Chart />
-          </CardBody>
-        </Card>
-        <Card>
-          <CardHeader>
-            <h3 className="text-xl">Active Users</h3>
-          </CardHeader>
-          <CardBody>
-            <p className="text-2xl">80%</p>
-          </CardBody>
-        </Card>
+    <div className="container mt-4">
+      <h1 className="mb-4">User Analytics</h1>
+
+      <div className="row">
+        {/* Monthly Overview Card */}
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-header">Monthly Overview</div>
+            <div className="card-body">
+              {/* Replace with your Chart Component */}
+              <p>Chart Component Goes Here</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Active Users Card */}
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-header">Active Users</div>
+            <div className="card-body">
+              <p className="fs-4">80%</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <Button variant="outline" onClick={() => alert('More Analytics')}>
+
+      {/* Button */}
+      <button className="btn btn-outline-primary mt-4" onClick={() => alert('More Analytics')}>
         View Detailed Analytics
-      </Button>
+      </button>
     </div>
   );
 };
